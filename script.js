@@ -1,14 +1,11 @@
-//your code here
-const input = document.querySelector(`#evaluatedText`);
-const h3 = document.querySelector(`#wordCount`);
-
-function countWords(e) {
-  e.preventDefault();
-
-  const inputVal = input.value;
-  let arr = inputVal.split(` `);
-
-  h3.textContent = arr.length;
+function countWord() {
+      var words = document.getElementById("evaluatedText").value;
+            var count = 0;
+            var split = words.split(' ');
+            for (var i = 0; i < split.length; i++) {
+                if (split[i] != "") {
+                    count += 1;
+                }
+            }
+	 document.getElementById("wordCount").innerText = count;
 }
-
-input.addEventListener(`input`, countWords);
